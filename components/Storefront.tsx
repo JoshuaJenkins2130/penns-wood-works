@@ -108,8 +108,7 @@ export default function Storefront() {
 </section>
 
       <footer>
-        <strong>Penn&apos;s Wood Works</strong>
-        <span>Handmade with care.</span>
+        <strong>Penn&apos;s Woodworks</strong>
       </footer>
 
       {selected && (
