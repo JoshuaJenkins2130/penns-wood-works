@@ -665,7 +665,7 @@ textarea {
 
 @media (max-width: 760px) {
   .hero {
-    height: 350px;
+    height: 300px;
   }
 
   .brandCard {
@@ -673,7 +673,7 @@ textarea {
   }
 
   .brandLogo {
-    width: min(240px, 70vw);
+    width: min(300px, 85vw);
   }
 
   .cartButton span {
