@@ -702,21 +702,51 @@ main {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
+  max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   justify-content: flex-start;
   gap: 16px;
-  padding: 0;
+  padding: 4px 0;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
 
 .productCard {
-  flex: 0 0 calc(100% - 32px);
-  width: calc(100% - 32px);
-  min-width: calc(100% - 32px);
-  scroll-snap-align: center;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  scroll-snap-align: start;
+}
+
+.sectionHeading h2 {
+  font-size: 1.65rem;
+}
+
+.productCardBody {
+  padding: 14px;
+}
+
+.productCardBody h3 {
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.productCardBody p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.productCardBody strong {
+  font-size: 1.05rem;
+}
+
+.brandCard p {
+  font-size: 2.3rem;
+  line-height: 1.1;
 }
 
   .productModal {

@@ -126,7 +126,7 @@ const scroll = (category: string, direction: number) => {
 </section>
 
       <footer>
-        <strong>Penn&apos;s Woodworks</strong>
+        <strong>Joshua Jenkins Production</strong>
       </footer>
 
       {selected && (
