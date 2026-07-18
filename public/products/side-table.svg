@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8c5d3c"/><stop offset="1" stop-color="#d0a06e"/></linearGradient></defs>
+<rect width="800" height="600" fill="#e8ddce"/><rect x="150" y="120" width="500" height="360" rx="28" fill="url(#g)"/>
+<path d="M180 170h440M180 235h440M180 300h440M180 365h440M180 430h440" stroke="#5b3a29" stroke-width="9" opacity=".55"/>
+<text x="400" y="535" text-anchor="middle" font-family="Georgia,serif" font-size="38" fill="#513426">Side Table</text>
+</svg>
