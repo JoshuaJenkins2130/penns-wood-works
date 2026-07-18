@@ -787,4 +787,46 @@ main {
   .reviewActions button {
     width: 100%;
   }
+
+  .productRow {
+  position: relative;
+}
+
+.categorySection:first-of-type .productRow::after {
+  content: "Swipe to view more →";
+  position: sticky;
+  right: 14px;
+  bottom: 14px;
+  align-self: flex-end;
+  z-index: 5;
+  flex: 0 0 auto;
+  padding: 9px 13px;
+  margin-left: -155px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--walnut);
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 5px 16px rgba(0,0,0,.2);
+  pointer-events: none;
+  animation: swipeHint 4s ease forwards;
+}
+
+@keyframes swipeHint {
+  0% {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+
+  15%,
+  65% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
