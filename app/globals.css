@@ -810,7 +810,7 @@ main {
   font-weight: 700;
   box-shadow: 0 5px 16px rgba(0,0,0,.2);
   pointer-events: none;
-  animation: swipeHint 4s ease infinite;
+  animation: swipeHint 7s ease-in-out infinite;
 }
 
 @keyframes swipeHint {
