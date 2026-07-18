@@ -14,9 +14,22 @@ export default function Storefront() {
   const { items, addItem, removeItem, updateQuantity, itemCount, subtotal } = useCart();
   const rowRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
-  const scroll = (category: string, direction: number) => {
-    rowRefs.current[category]?.scrollBy({ left: direction * 340, behavior: "smooth" });
-  };
+const scroll = (category: string, direction: number) => {
+  const row = rowRefs.current[category];
+
+  if (!row) return;
+
+  const firstCard = row.querySelector<HTMLElement>(".productCard");
+  const cardWidth = firstCard?.offsetWidth ?? 320;
+
+  const styles = window.getComputedStyle(row);
+  const gap = Number.parseFloat(styles.columnGap || styles.gap) || 0;
+
+  row.scrollBy({
+    left: direction * (cardWidth + gap),
+    behavior: "smooth",
+  });
+};
 
   return (
     <main>
@@ -50,14 +63,19 @@ export default function Storefront() {
     );
 
     const isScrollable = categoryProducts.length > 4;
+    const hasMultipleProducts = categoryProducts.length > 1;
 
     return (
       <section className="categorySection" key={category}>
         <div className="sectionHeading">
           <h2>{category}</h2>
 
-          {isScrollable && (
-            <div className="rowControls">
+          {hasMultipleProducts && (
+            <div
+              className={`rowControls ${
+                isScrollable ? "desktopControls" : "mobileControls"
+              }`}
+          >
               <button
                 onClick={() => scroll(category, -1)}
                 aria-label={`Scroll ${category} left`}

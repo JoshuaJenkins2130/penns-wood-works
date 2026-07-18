@@ -14,13 +14,17 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
   background: var(--cream);
   color: var(--charcoal);
-  font-family: Arial, Helvetica, sans-serif;
+ 
 }
 
 button,
@@ -159,6 +163,10 @@ button {
   right: 0;
   display: flex;
   gap: 8px;
+}
+
+.rowControls.mobileControls {
+  display: none;
 }
 
 .rowControls button,
@@ -673,13 +681,43 @@ textarea {
   }
 
   .storeContent {
-    padding: 38px 16px;
-  }
+  width: 100%;
+  max-width: 100%;
+  padding: 38px 16px;
+  overflow: hidden;
+}
 
-  .productCard {
-    min-width: 260px;
-    width: 260px;
-  }
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.categorySection {
+  overflow-x: hidden;
+}
+
+.productRow,
+.productRow.centered,
+.productRow.scrollable {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.productCard {
+  flex: 0 0 calc(100% - 32px);
+  width: calc(100% - 32px);
+  min-width: calc(100% - 32px);
+  scroll-snap-align: center;
+}
 
   .productModal {
     grid-template-columns: 1fr;
