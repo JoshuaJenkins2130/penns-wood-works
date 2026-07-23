@@ -673,7 +673,7 @@ textarea {
   }
 
   .brandLogo {
-    width: min(300px, 85vw);
+    width: min(200px, 75vw);
   }
 
   .cartButton span {
