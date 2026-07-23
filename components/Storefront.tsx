@@ -50,7 +50,7 @@ const scroll = (category: string, direction: number) => {
           />
 
           <p className={`${cinzel.className} tagline`}>
-    Built to Last
+    
   </p>
 
 </div>
