@@ -9,7 +9,7 @@ const oldEnglish = UnifrakturCook({
 });
 
 export const metadata: Metadata = {
-  title: "Penn's Wood Works",
+  title: "Honeycomb Woodworks",
   description: "Handcrafted wood products.",
 };
 

@@ -42,7 +42,7 @@ const scroll = (category: string, direction: number) => {
          
          <Image
             src="/products/logo/logo.png"
-            alt="Penn's Wood Works logo"
+            alt="Honeycomb Woodworks logo"
             width={320}
             height={200}
             className="brandLogo"
